@@ -1,3 +1,7 @@
+<img width="1307" height="475" alt="Screenshot 2026-11-07 124333" src="https://github.com/user-attachments/assets/299f8808-aa49-4b5e-9f66-61f8aa1b7817" />
+<img width="1296" height="430" alt="Screenshot 2026-11-07 124014" src="https://github.com/user-attachments/assets/926b900b-5e88-46e6-8090-09da1c81bd8c" />
+<img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/de734f0e-b57e-4d9a-a80c-9aa6897ca676" />
+<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/6ecb2650-bd08-48fb-b606-7500538c39c5" />
 # QueryLens
 
 **Ask your database a question in plain English and get back the SQL, the results, and a chart.**

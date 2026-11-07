@@ -135,6 +135,7 @@ querylens/
 
 
 **Line chart: "No. of order per month"**
+
 <img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/ab85f749-f13a-4b52-b222-b759719a47bc" />
 
 **Table output for the same category-sales query**

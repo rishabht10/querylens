@@ -1,68 +1,9 @@
 
-
-
-
 # QueryLens
 
 **Ask your database a question in plain English and get back the SQL, the results, and a chart.**
 
 QueryLens is a natural-language-to-SQL app with automatic graph generation. You type a question such as *"Total sales per product category"*, an LLM (Google Gemini) turns it into a SQL query, the query runs safely against the database, and the results appear as a table and, when the shape of the data suits it, as a chart. The sample database is the classic **Northwind** sales dataset (SQLite).
-
-## Features
-
-- **Plain English to SQL** using the Google Gemini API.
-- **Automatic charts**: the backend inspects the result and picks a bar chart (categories), a line chart (dates and time series) or a scatter plot (two numeric columns), rendered with Chart.js.
-- **Schema-aware prompting**: table definitions, foreign keys and sample rows are read from the database and sent to the model, so it uses real table and column names.
-- **Self-correcting**: if the generated SQL fails, the error is sent back to the model for a corrected query (up to 2 retries).
-- **Model fallback**: if the primary Gemini model is overloaded, an optional fallback model is tried, with exponential back-off.
-- **Command-line mode** for quick queries without the browser.
-
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Backend | Python, FastAPI, Uvicorn |
-| LLM | Google Gemini (`google-genai`) |
-| Database | SQLite (Northwind), SQLAlchemy for schema introspection |
-| Frontend | HTML, CSS, vanilla JavaScript, Chart.js |
-
-## How It Works
-
-```
-Question ──> Schema + prompt ──> Gemini ──> SQL ──> Validate ──> Run (read-only SQLite)
-                                              ^                         |
-                                              └── error + retry <───────┤
-                                                                        v
-                                                       Table + auto-picked chart
-```
-
-1. The frontend sends the question and recent chat history to `POST /api/query`.
-2. `schema.py` builds a text description of the database, and `prompt.py` wraps it in a system prompt with rules and examples.
-3. `nl2sql.py` and `llm.py` ask Gemini for a single SQL query.
-4. `runner.py` validates the query, executes it read-only, and retries with the error message if it fails.
-5. `charts.py` recommends a chart type, and the frontend renders the table and chart.
-
-## Project Structure
-
-```
-querylens/
-├── backend/
-│   ├── main.py            # FastAPI app, /api/query endpoint, serves the frontend
-│   ├── llm.py             # Gemini client, retries and model fallback
-│   ├── nl2sql.py          # Question to SQL generation
-│   ├── prompt.py          # System prompt, dialect notes, few-shot examples
-│   ├── schema.py          # Reads tables, foreign keys and sample rows
-│   ├── runner.py          # SQL validation, safe execution, retry loop
-│   ├── charts.py          # Chart type recommendation
-│   ├── cli.py             # Terminal version
-│   ├── northwind.db       # Sample database
-│   └── requirements.txt
-├── frontend/
-│   ├── index.html
-│   ├── app.js
-│   └── ui.css
-└── .gitignore
-```
 
 ## To Run on your Local Machine
 
@@ -128,11 +69,70 @@ uvicorn main:app --reload
 
 Go to **http://127.0.0.1:8000** and ask a question.
 
+## Features
+
+- **Plain English to SQL** using the Google Gemini API.
+- **Automatic charts**: the backend inspects the result and picks a bar chart (categories), a line chart (dates and time series) or a scatter plot (two numeric columns), rendered with Chart.js.
+- **Schema-aware prompting**: table definitions, foreign keys and sample rows are read from the database and sent to the model, so it uses real table and column names.
+- **Self-correcting**: if the generated SQL fails, the error is sent back to the model for a corrected query (up to 2 retries).
+- **Model fallback**: if the primary Gemini model is overloaded, an optional fallback model is tried, with exponential back-off.
+- **Command-line mode** for quick queries without the browser.
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Backend | Python, FastAPI, Uvicorn |
+| LLM | Google Gemini (`google-genai`) |
+| Database | SQLite (Northwind), SQLAlchemy for schema introspection |
+| Frontend | HTML, CSS, vanilla JavaScript, Chart.js |
+
+## How It Works
+
+```
+Question ──> Schema + prompt ──> Gemini ──> SQL ──> Validate ──> Run (read-only SQLite)
+                                              ^                         |
+                                              └── error + retry <───────┤
+                                                                        v
+                                                       Table + auto-picked chart
+```
+
+1. The frontend sends the question to `POST /api/query`.
+2. `schema.py` builds a text description of the database, and `prompt.py` wraps it in a system prompt with rules and examples.
+3. `nl2sql.py` and `llm.py` ask Gemini for a single SQL query.
+4. `runner.py` validates the query, executes it read-only, and retries with the error message if it fails.
+5. `charts.py` recommends a chart type, and the frontend renders the table and chart.
+
+## Project Structure
+
+```
+querylens/
+├── backend/
+│   ├── main.py            # FastAPI app, /api/query endpoint, serves the frontend
+│   ├── llm.py             # Gemini client, retries and model fallback
+│   ├── nl2sql.py          # Question to SQL generation
+│   ├── prompt.py          # System prompt, dialect notes, few-shot examples
+│   ├── schema.py          # Reads tables, foreign keys and sample rows
+│   ├── runner.py          # SQL validation, safe execution, retry loop
+│   ├── charts.py          # Chart type recommendation
+│   ├── cli.py             # Terminal version
+│   ├── northwind.db       # Sample database
+│   └── requirements.txt
+├── frontend/
+│   ├── index.html
+│   ├── app.js
+│   └── ui.css
+└── .gitignore
+```
+
+
+
 ## Screenshots
 
 **Bar chart: "Total sales per product category"**
 
-![Bar chart](<img width="1307" height="475" alt="Screenshot 2026-11-07 124333" src="https://github.com/user-attachments/assets/299f8808-aa49-4b5e-9f66-61f8aa1b7817" />
+![Bar chart](<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/6882da0d-5b64-43b5-9580-92033ab993fd" />
+
 )
 
 **Line chart: "No. of order per month"**

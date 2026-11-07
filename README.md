@@ -131,23 +131,27 @@ querylens/
 
 **Bar chart: "Total sales per product category"**
 
-![Bar chart](<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/6882da0d-5b64-43b5-9580-92033ab993fd" />
+<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/6882da0d-5b64-43b5-9580-92033ab993fd" />
 
-)
 
 **Line chart: "No. of order per month"**
-
-![Line chart](<img width="1296" height="430" alt="Screenshot 2026-11-07 124014" src="https://github.com/user-attachments/assets/926b900b-5e88-46e6-8090-09da1c81bd8c" />)
+<img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/ab85f749-f13a-4b52-b222-b759719a47bc" />
 
 **Table output for the same category-sales query**
 
-![Table result](<img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/de734f0e-b57e-4d9a-a80c-9aa6897ca676" />
-)
+<img width="1296" height="430" alt="Screenshot 2026-11-07 124014" src="https://github.com/user-attachments/assets/0131a899-6941-42a1-baa9-6d3027e56076" />
+
 
 **Simple aggregate: "what are the total no. of employee"**
 
-![Simple query](<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/6ecb2650-bd08-48fb-b606-7500538c39c5" />
-)
+<img width="1307" height="475" alt="Screenshot 2026-11-07 124333" src="https://github.com/user-attachments/assets/88f306b7-ede5-4f22-abd9-ecf78be6c44c" />
+
+**Other queries** 
+<img width="1301" height="525" alt="Screenshot 2026-11-07 124432" src="https://github.com/user-attachments/assets/1ef9bcb8-39dc-4ab5-aa3c-2f482bd9df37" /> 
+
+<img width="1317" height="781" alt="Screenshot 2026-11-07 124559" src="https://github.com/user-attachments/assets/7c167009-f088-41c1-8a09-9f99fd6e1ec9" />
+<img width="1432" height="1065" alt="Screenshot 2026-11-07 124649" src="https://github.com/user-attachments/assets/47247aa3-4683-4780-ba2d-5e3917ae2a20" />
+
 
 
 

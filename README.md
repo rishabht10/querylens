@@ -1,7 +1,7 @@
-<img width="1307" height="475" alt="Screenshot 2026-11-07 124333" src="https://github.com/user-attachments/assets/299f8808-aa49-4b5e-9f66-61f8aa1b7817" />
-<img width="1296" height="430" alt="Screenshot 2026-11-07 124014" src="https://github.com/user-attachments/assets/926b900b-5e88-46e6-8090-09da1c81bd8c" />
-<img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/de734f0e-b57e-4d9a-a80c-9aa6897ca676" />
-<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/6ecb2650-bd08-48fb-b606-7500538c39c5" />
+
+
+
+
 # QueryLens
 
 **Ask your database a question in plain English and get back the SQL, the results, and a chart.**
@@ -132,22 +132,21 @@ Go to **http://127.0.0.1:8000** and ask a question.
 
 **Bar chart: "Total sales per product category"**
 
-![Bar chart](<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/ec210b3a-1696-4a32-9af9-614a82791e44" />
+![Bar chart](<img width="1307" height="475" alt="Screenshot 2026-11-07 124333" src="https://github.com/user-attachments/assets/299f8808-aa49-4b5e-9f66-61f8aa1b7817" />
 )
 
 **Line chart: "No. of order per month"**
 
-![Line chart](<img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/64dbd574-f2af-45e4-a671-63649bb04802" />
-)
+![Line chart](<img width="1296" height="430" alt="Screenshot 2026-11-07 124014" src="https://github.com/user-attachments/assets/926b900b-5e88-46e6-8090-09da1c81bd8c" />)
 
 **Table output for the same category-sales query**
 
-![Table result](<img width="1296" height="430" alt="Screenshot 2026-11-07 124014" src="https://github.com/user-attachments/assets/75212e92-0e6d-4704-ba71-db377f8a0911" />
+![Table result](<img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/de734f0e-b57e-4d9a-a80c-9aa6897ca676" />
 )
 
 **Simple aggregate: "what are the total no. of employee"**
 
-![Simple query](<img width="1301" height="525" alt="Screenshot 2026-11-07 124432" src="https://github.com/user-attachments/assets/6d0f7805-7747-4685-9002-ddcf6b2eac59" />
+![Simple query](<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/6ecb2650-bd08-48fb-b606-7500538c39c5" />
 )
 
 

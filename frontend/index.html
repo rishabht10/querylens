@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QueryLens</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+
+<link rel="stylesheet" href="ui.css"></link>
+<link rel="icon" href="./logo2.png" >
+
+</head>
+<body>
+<h1>QueryLens</h1>
+<p class="sub">Generate SQL and query database in plain and simple English, Database used for sample is Northwind Sales data.</p>
+<div class="ask">
+  <input id="q" placeholder="try asking for Total sales per product category, etc." autofocus>
+  <button id="go">Run Query</button>
+  <button id="clear" class="ghost">Clear Chat</button>
+
+</div>
+<div id="status"></div>
+<pre id="sql" hidden></pre>
+<div id="chartbox" hidden><canvas id="chart"></canvas></div>
+<div id="tablebox" class="tbl"></div>
+<script src="./app.js"></script>
+
+
+</body>
+</html>

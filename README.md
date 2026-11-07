@@ -128,19 +128,23 @@ Go to **http://127.0.0.1:8000** and ask a question.
 
 **Bar chart: "Total sales per product category"**
 
-![Bar chart](docs/screenshots/chart-bar.png)
+![Bar chart](<img width="1307" height="902" alt="Screenshot 2026-11-07 055637" src="https://github.com/user-attachments/assets/ec210b3a-1696-4a32-9af9-614a82791e44" />
+)
 
 **Line chart: "No. of order per month"**
 
-![Line chart](docs/screenshots/chart-line.png)
+![Line chart](<img width="1297" height="890" alt="Screenshot 2026-11-07 055857" src="https://github.com/user-attachments/assets/64dbd574-f2af-45e4-a671-63649bb04802" />
+)
 
 **Table output for the same category-sales query**
 
-![Table result](docs/screenshots/table-result.png)
+![Table result](<img width="1296" height="430" alt="Screenshot 2026-11-07 124014" src="https://github.com/user-attachments/assets/75212e92-0e6d-4704-ba71-db377f8a0911" />
+)
 
 **Simple aggregate: "what are the total no. of employee"**
 
-![Simple query](docs/screenshots/simple-query.png)
+![Simple query](<img width="1301" height="525" alt="Screenshot 2026-11-07 124432" src="https://github.com/user-attachments/assets/6d0f7805-7747-4685-9002-ddcf6b2eac59" />
+)
 
 
 

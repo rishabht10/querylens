@@ -108,15 +108,15 @@ Question ──> Schema + prompt ──> Gemini ──> SQL ──> Validate ─
 ```
 querylens/
 ├── backend/
-│   ├── main.py            # FastAPI app, /api/query endpoint, serves the frontend
-│   ├── llm.py             # Gemini client, retries and model fallback
-│   ├── nl2sql.py          # Question to SQL generation
-│   ├── prompt.py          # System prompt, dialect notes, few-shot examples
-│   ├── schema.py          # Reads tables, foreign keys and sample rows
-│   ├── runner.py          # SQL validation, safe execution, retry loop
-│   ├── charts.py          # Chart type recommendation
-│   ├── cli.py             # Terminal version
-│   ├── northwind.db       # Sample database
+│   ├── main.py            #FastAPI app, /api/query endpoint, serves the frontend
+│   ├── llm.py             #Gemini client, retries and model fallback
+│   ├── nl2sql.py          #Question to SQL generation
+│   ├── prompt.py          #System prompt, dialect notes, few-shot examples
+│   ├── schema.py          #Reads tables, foreign keys and sample rows
+│   ├── runner.py          #SQL validation, safe execution, retry loop
+│   ├── charts.py          #Chart type recommendation
+│   ├── cli.py             #Run from terminal
+│   ├── northwind.db       #Sample database used
 │   └── requirements.txt
 ├── frontend/
 │   ├── index.html
@@ -154,9 +154,7 @@ querylens/
 <img width="1432" height="1065" alt="Screenshot 2026-11-07 124649" src="https://github.com/user-attachments/assets/47247aa3-4683-4780-ba2d-5e3917ae2a20" />
 
 
-
-
-## Example Questions
+## Example Questions to try
 
 - Top 10 customers by total order value
 - Average order value by country
@@ -169,12 +167,8 @@ Because an LLM writes the SQL, every query is checked before it runs:
 - Statements containing `INSERT`, `UPDATE`, `DELETE`, `DROP`, `ALTER`, `CREATE`, `ATTACH`, `PRAGMA` and similar keywords are blocked.
 - The database is opened in **read-only mode**. 
 - Queries time out after 5 seconds, and results are capped at 500 rows.
-- If the question cannot be answered from the schema, the model returns `CANNOT_ANSWER` and the app says so instead of guessing.
+- If the question cannot be answered from the schema, the model returns `CANNOT_ANSWER` and instead of guessing.
 
-## Limitations
-
-- Generated SQL can be wrong, especially for complex multi-condition questions. Always read the SQL shown above the results.
-- Currently set up for the SQLite Northwind database. The prompt already has notes for PostgreSQL, but the runner is SQLite-only.
 
 ## Future Improvements
 
